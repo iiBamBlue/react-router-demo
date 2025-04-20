@@ -1,7 +1,22 @@
+import { Outlet, Link } from "react-router-dom";
+import "./AboutMe.css";
+
 function AboutMe() {
   return (
-    <div>
-      <p>I&apos;m a simple person. I see Emojis, I write reviews.</p>
+    <div className="about">
+      <ul className="links">
+        <li>
+          <Link to="my-story">My Story</Link>
+        </li>
+        <li>
+          <Link to="hobbies">Hobbies</Link>
+        </li>
+        <li>
+          <Link to="contact">My Contact Info</Link>
+        </li>
+      </ul>
+      <p>I'm a simple person. I see Emojis, I write reviews.</p>
+      <Outlet />
     </div>
   );
 }
